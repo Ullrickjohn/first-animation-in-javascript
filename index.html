@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js hover</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+    <section class="section">
+
+    </section>
+    <script>
+        for (let i = 1; i <= 341; i++){
+        let box  = document.createElement('div');
+        box.classList.add('box');
+        document.querySelector('.section').appendChild(box);
+        }
+        function animateBx(){
+        let boxes = document.querySelectorAll('.box');
+        let num = Math.floor(Math.random()*boxes.length);
+        boxes[num].classList.toggle('animate')
+        }
+        setInterval(animateBx);
+    </script>
+</body>
+</html>
